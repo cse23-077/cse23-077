@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warnerbros | Home of WB Movies, TV, Games & More!</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff; /* Light blue background color */
+        }
+        header {
+            background-color: rgb(29, 20, 158);
+            color: #fff;
+            padding: 10px;
+            text-align: center; 
+            position: relative;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1400px; /* Adjust the max-width as needed */
+            margin: 100px auto;
+            padding: 0 20px;
+        }
+        .movie {
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1 1 250px; /* Ensure flex items grow and shrink as needed */
+            transition: transform 0.3s ease-in-out;
+        }
+        .movie:hover {
+            transform: scale(1.05);
+        }
+        .movie img {
+            width: 100%; /* Set image width to 100% */
+            height: 200px; /* Set a fixed height for all images */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 5px;
+        }
+        .movie h2 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .movie p {
+            margin-top: 5px;
+            color: #666;
+        }
+        /* Navigation Stylish Buttons */
+        .nav-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .nav-wrapper a {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #111;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-wrapper a:hover {
+            background-color: #333;
+        }
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            width: 180px;
+        }
+        .search-container button {
+            padding: 10px;
+            background: #ddd;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background: #ccc;
+        }
+        footer {
+            background-color: rgb(29, 20, 158);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+        /* Slideshow CSS */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        .mySlides {
+            display: none;
+        }
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active {
+            background-color: #717171;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .movie {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            .search-container input[type="text"] {
+                width: 120px;
+            }
+            .search-container button {
+                padding: 5px;
+            }
+        }
+        @media (max-width: 480px) {
+            .nav-wrapper a {
+                margin: 5px 0;
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+            .search-container input[type="text"] {
+                width: 100px;
+                font-size: 14px;
+            }
+            .search-container button {
+                padding: 5px;
+                font-size: 14px;
+            }
+            .social-icons img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>    
+</head>
+<body>
+<header>
+    <img src="img6.png" alt="Warner Bros. Logo" width="120" height="120">
+    <h1>WARNER BROS</h1>
+    <div class="nav-wrapper">
+        <a href="Home.html">Home</a>
+        <a href="Movies.html">Movies</a>
+        <a href="TV SHOWS.html">TV Shows</a>
+        <a href="Games and Apps.html">Games & Apps</a>
+        <a href="Collections.html">Collections</a>
+        <a href="Feedback.html">Feedback</a>
+    </div>
+    <div class="search-container">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i>🔍</button>
+        </form>
+    </div>
+</header>
+<section id="slideshow">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Holiday.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Horror.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="TheB.jpg" style="width:100%">
+        </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+<section id="collections"> 
+    <h1>COLLECTIONS</h1>
+    <div class="container">
+        <div class="movie">
+            <img src="Holiday.jpg" alt="HOLIDAY">
+            <h2>HOLIDAY</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Action.jpg" alt="ACTION">
+            <h2>ACTION</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Romance.jpg" alt="ROMANCE">
+            <h2>ROMANCE</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Horror.jpg" alt="HORROR">
+            <h2>HORROR</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Fanff.jpg" alt="FAN FAVOURITES">
+            <h2>FAN FAVOURITES</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="TheB.jpg" alt="THE BACHELOR">
+            <h2>THE BACHELOR</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Supernatural.jpg" alt="SUPERSTITION">
+            <h2>SUPERSTITION</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Family.jpg" alt="FAMILY">
+            <h2>FAMILY</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Animation.jpg" alt="ANIMATION">
+            <h2>ANIMATION</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="sci-fi.jpg" alt="SCI-FI">
+            <h2>SCI-FI</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="classic cinema.jpg" alt="CLASSIC CINEMA">
+            <h2>CLASSIC CINEMA</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Series.jpg" alt="SERIES">
+            <h2>SERIES</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Drama.jpg" alt="DRAMA">
+            <h2>DRAMA</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Criterion.jpg" alt="CRITERION">
+            <h2>CRITERION</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+        <div class="movie">
+            <img src="Franchise.jpg" alt="FRANCHISE">
+            <h2>FRANCHISE</h2>
+            <a href="#" class="book-button">Book</a>
+            <a href="#" class="book-button">Watch</a>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com/Warnerbros/"><img src="twitter.png" alt="twitter"></a>
+        <a href="https://www.instagram.com/warnerbrosentertainment/"><img src="insta.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/user/WarnerBrosPictures"><img src="youtube.png" alt="YouTube"></a>
+    </div>
+    <p>© 2024 Warner Bros. Entertainment Inc. All rights reserved.</p>
+</footer>
+<script>
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 1000); // Change image every 3 seconds
+    }
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        section.scrollIntoView({behavior: 'smooth'});
+    }
+</script>
+</body>
+</html>

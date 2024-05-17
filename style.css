@@ -1,0 +1,160 @@
+
+body {
+    background-color:;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding:0;
+}
+header img {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+}
+
+.container {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+   
+}
+.movie {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.movie-content {
+    text-align: center;
+}
+
+.movie img {
+    width: auto;
+    max-height: 150px;
+}
+
+.movie {
+    transition: transform 0.3s ease;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+/* Styles for Games */
+.games-container {
+    margin-top: 50px; /* Adjust the margin as needed */
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.game {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+}
+
+.game img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.game h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.game p {
+    margin-top: 5px;
+    color: #666;
+}
+
+/* Navigation Slide Bar */
+.sidenav {
+    /* your existing styles */
+}
+.sidenav a {
+    /* your existing styles */
+}
+.sidenav a:hover {
+    /* your existing styles */
+}
+
+.sidenav .closebtn {
+    /* your existing styles */
+}
+@media screen and (max-height: 450px) {
+    /* your existing styles */
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+	width:100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.social-icons a {
+    margin-left: 10px; /* Adjust the spacing between icons */
+}
+
+.social-icons img {
+    width: 30px; /* Adjust the size of the icons */
+    height: auto;
+}
+/* Games section */
+.game {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+}
+
+.game img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.game h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.game p {
+    margin-top: 5px;
+    color: #666;
+}
+
+.body {
+    background-color: lightblue; 
+    margin: 0; 
+    padding: 0; 
+}
+
+#carouselExampleIndicators .carousel-item img {
+    width: 100%;
+    height: 300px; /* Set your desired height here */
+    object-fit: cover;   css  for that code
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warnerbros|Home of WB Movies, TV, Games More!</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Additional styles for the menu button */
+        .menu-icon {
+            display: none; /* Hide the menu icon by default */
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000; /* Ensure it's above other elements */
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block; /* Show the menu icon on smaller screens */
+            }
+            .sidenav {
+                width: 250px; /* Adjust the width of the sidebar */
+            }
+        }
+
+        /* Spacing between sections */
+        section {
+            margin-bottom: 40px;
+        }
+
+        /* Style for the feedback form */
+        .feedback-form {
+            margin-top: 20px; /* Add margin to the top of the form */
+            background-color: #f9f9f9; /* Light gray background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        /* Light blue background color for the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ADD8E6; /* Light blue background color */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="img6.png" alt="Warner Bros. Logo" width="60" height="60">
+    <h1>WARNER BROS</h1>
+    <div class="nav-wrapper">
+        <a href="Home.html">Home</a>
+        <a href="Movies.html">Movies</a>
+        <a href="TV SHOWS.html">TV Shows</a>
+        <a href="Games and Apps.html">Games & Apps</a>
+        <a href="Collections.html">Collections</a>
+        <a href="Feedback.html">Feedback</a>
+    </div>
+    <!-- Menu button icon -->
+    <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
+    <div class="search-container" style="position: absolute; top: 10px; right: 10px; width: 250px; height: 50px;">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</header>
+<section>
+    <div class="container feedback-form"> <!-- Added a class to style the feedback form -->
+        <h2>Share Your Feedback</h2>
+        <form action="/movies/ALL%20AMERICAN%20SEASON%204/feedback" method="POST">
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" cols="50" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </form>
+    </div>
+</section>
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook.png" alt="Facebook" width="60" height="50"></a>
+        <a href="https://twitter.com/Warnerbros/"><img src="twitter.png" alt="twitter" width="60" height="50"></a>
+        <a href="https://www.instagram.com/warnerbrosentertainment/"><img src="insta.png" alt="Instagram" width="60" height="50"></a>
+        <a href="https://www.youtube.com/user/WarnerBrosPictures"><img src="youtube.png" alt="YouTube" width="60" height="50"></a>
+    </div>
+    <div class="search-container" style="position: absolute; top: 10px; right: 10px; width: auto; height: 50px;">
+        <form action="/action_page.php">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search.." name="search">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</footer>
+<script>
+    // Function to toggle the sidebar
+    function toggleNav() {
+        var sidenav = document.getElementById("mySidenav");
+        if (sidenav.style.width === "250px") {
+            sidenav.style.width = "0";
+        } else {
+            sidenav.style.width = "250px";
+        }
+    }
+</script>
+</body>
+</html>
