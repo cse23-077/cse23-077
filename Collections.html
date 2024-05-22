@@ -9,12 +9,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e6f7ff; /* Light blue background color */
+            background-color: #e6f7ff;
         }
         header {
             background-color: rgb(29, 20, 158);
@@ -29,10 +30,11 @@
         .container {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            max-width: 1400px; /* Adjust the max-width as needed */
+            max-width: 1400px;
             margin: 100px auto;
             padding: 0 20px;
+            height: auto;
+            flex-wrap: wrap;
         }
         .movie {
             margin: 10px;
@@ -41,16 +43,16 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
-            flex: 1 1 250px; /* Ensure flex items grow and shrink as needed */
+            max-width: 250px;
             transition: transform 0.3s ease-in-out;
         }
         .movie:hover {
             transform: scale(1.05);
         }
         .movie img {
-            width: 100%; /* Set image width to 100% */
-            height: 200px; /* Set a fixed height for all images */
-            object-fit: cover; /* Maintain aspect ratio */
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
             border-radius: 5px;
         }
         .movie h2 {
@@ -61,22 +63,17 @@
             margin-top: 5px;
             color: #666;
         }
-        /* Navigation Stylish Buttons */
         .nav-wrapper {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 10px;
         }
         .nav-wrapper a {
-            margin: 0 10px;
-            padding: 10px 20px;
-            background-color: #111;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            color: white;
             text-decoration: none;
-            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 5px;
             transition: background-color 0.3s ease;
         }
         .nav-wrapper a:hover {
@@ -117,85 +114,81 @@
             width: 100%;
         }
         .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 10px;
+            float: right;
+            padding-right: 20px;
         }
         .social-icons a {
             display: inline-block;
-            margin: 0 10px;
+            margin-left: 15px;
         }
         .social-icons img {
             width: 40px;
             height: 40px;
         }
-        /* Slideshow CSS */
         .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
-        .mySlides {
-            display: none;
-        }
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-        @keyframes fade {
-            from {opacity: .4} 
-            to {opacity: 1}
-        }
-        .dot {
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-        .active {
-            background-color: #717171;
-        }
-        @media (max-width: 768px) {
-            .container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides img {
+    width: 100%;
+    max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+
+@keyframes fade {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+/* Adjusted margin for movie elements */
+.container .movie {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: calc(20% - 20px); /* 20% width with 10px margin on each side */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Adjusted movie width for smaller screens */
+@media (max-width: 768px) {
+    .container .movie {
+        max-width: calc(33.33% - 20px); /* 33.33% width with 10px margin on each side */
+    }
+}
+
+@media (max-width: 480px) {
+    .container .movie {
+        max-width: calc(50% - 20px); /* 50% width with 10px margin on each side */
+    }
+}
+
+            .movie {
+                max-width: 90%;
+            }
+            .search-container {
+                top: 5px;
+                right: 5px;
+            }
+            .search-container input[type="text"] {
+                width: 150px;
+            }
+        
+        @media (max-width: 480px) {
+            .nav-wrapper {
                 flex-direction: column;
                 align-items: center;
             }
-            .movie {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
-            .search-container input[type="text"] {
-                width: 120px;
-            }
-            .search-container button {
-                padding: 5px;
-            }
-        }
-        @media (max-width: 480px) {
-            .nav-wrapper a {
-                margin: 5px 0;
-                padding: 5px 10px;
-                font-size: 14px;
-            }
             .search-container input[type="text"] {
                 width: 100px;
-                font-size: 14px;
-            }
-            .search-container button {
-                padding: 5px;
-                font-size: 14px;
-            }
-            .social-icons img {
-                width: 30px;
-                height: 30px;
             }
         }
-    </style>    
+    </style>
 </head>
 <body>
 <header>
@@ -216,16 +209,17 @@
         </form>
     </div>
 </header>
+
 <section id="slideshow">
     <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="Holiday.jpg" style="width:100%">
+        <div class="mySlides">
+            <img src="gone.jpeg" style="width:100%">
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides">
+            <img src="EverythingB.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
             <img src="Horror.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="TheB.jpg" style="width:100%">
         </div>
     </div>
     <br>
@@ -235,6 +229,7 @@
         <span class="dot"></span>
     </div>
 </section>
+
 <section id="collections"> 
     <h1>COLLECTIONS</h1>
     <div class="container">
@@ -328,8 +323,7 @@
             <a href="#" class="book-button">Book</a>
             <a href="#" class="book-button">Watch</a>
         </div>
-    </div>
-</section>
+
 <footer>
     <div class="social-icons">
         <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook.png" alt="Facebook"></a>
@@ -339,9 +333,11 @@
     </div>
     <p>© 2024 Warner Bros. Entertainment Inc. All rights reserved.</p>
 </footer>
+
 <script>
     var slideIndex = 0;
     showSlides();
+
     function showSlides() {
         var i;
         var slides = document.getElementsByClassName("mySlides");
@@ -351,13 +347,14 @@
         }
         slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}    
-        for (i = 0; dots.length; i++) {
+        for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 1000); // Change image every 3 seconds
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
     }
+
     function scrollToSection(sectionId) {
         var section = document.getElementById(sectionId);
         section.scrollIntoView({behavior: 'smooth'});

@@ -65,15 +65,17 @@
         <a href="Games and Apps.html">Games & Apps</a>
         <a href="Collections.html">Collections</a>
         <a href="Feedback.html">Feedback</a>
-    </div>
-    <!-- Menu button icon -->
-    <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
-    <div class="search-container" style="position: absolute; top: 10px; right: 10px; width: 250px; height: 50px;">
-        <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
+        <div class="search-container" style="position: absolute; top: 10px; right: 10px; width: auto;">
+            <form action="/action_page.php" class="form-inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." name="search">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
 </header>
 <section>
     <div class="container feedback-form"> <!-- Added a class to style the feedback form -->
