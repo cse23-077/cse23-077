@@ -158,3 +158,867 @@ footer {
     height: 300px; /* Set your desired height here */
     object-fit: cover;   css  for that code
 }
+
+
+.movie {
+    margin: 10px;
+    padding 20px;
+    background-color #fff
+    border-radius 5px;
+    box-shadow 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align center     
+    max-width 250px;
+    transition transform 0.3s ease-in-out;
+}
+.movie:hover {
+    transform: scale(1.05);
+}
+.movie img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.movie h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+.movie p {
+    margin-top: 5px;
+    color: #666;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.nav-wrapper a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.nav-wrapper a:hover {
+    background-color: #333;
+}
+.search-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 180px;
+}
+.search-container button {
+    padding: 10px;
+    background: #ddd;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.search-container button:hover {
+    background: #ccc;
+}
+footer {
+    background-color: rgb(29, 20, 158);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.social-icons {
+    float: right;
+    padding-right: 20px;
+}
+.social-icons a {
+    display: inline-block;
+    margin-left: 15px;
+}
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+.slideshow-container {
+max-width: 100%;
+overflow: hidden;
+position: relative;
+margin: auto;
+}
+
+.mySlides img {
+width: 100%;
+max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff;
+}
+header {
+    background-color: rgb(29, 20, 158);
+    color: #fff;
+    padding: 10px;
+    text-align: center; 
+    position: relative;
+}
+h1 {
+    margin: 20px 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 100px auto;
+    padding: 0 20px;
+    height: auto;
+    flex-wrap: wrap;
+}
+.movie {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+.movie:hover {
+    transform: scale(1.05);
+}
+.movie img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.movie h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+.movie p {
+    margin-top: 5px;
+    color: #666;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.nav-wrapper a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.nav-wrapper a:hover {
+    background-color: #333;
+}
+.search-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 180px;
+}
+.search-container button {
+    padding: 10px;
+    background: #ddd;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.search-container button:hover {
+    background: #ccc;
+}
+footer {
+    background-color: rgb(29, 20, 158);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.social-icons {
+    float: right;
+    padding-right: 20px;
+}
+.social-icons a {
+    display: inline-block;
+    margin-left: 15px;
+}
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+.slideshow-container {
+max-width: 100%;
+overflow: hidden;
+position: relative;
+margin: auto;
+}
+
+.mySlides img {
+width: 100%;
+max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+
+@keyframes fade {
+from {opacity: 0} 
+to {opacity: 1}
+}
+
+/* Adjusted margin for movie elements */
+.container .movie {
+margin: 10px;
+padding: 20px;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+text-align: center;
+max-width: calc(20% - 20px); /* 20% width with 10px margin on each side */
+transition: transform 0.3s ease-in-out;
+}
+
+/* Adjusted movie width for smaller screens */
+@media (max-width: 768px) {
+.container .movie {
+max-width: calc(33.33% - 20px); /* 33.33% width with 10px margin on each side */
+}
+}
+
+@media (max-width: 480px) {
+.container .movie {
+max-width: calc(50% - 20px); /* 50% width with 10px margin on each side */
+}
+}
+
+    .movie {
+        max-width: 90%;
+    }
+    .search-container {
+        top: 5px;
+        right: 5px;
+    }
+    .search-container input[type="text"] {
+        width: 150px;
+    }
+
+@media (max-width: 480px) {
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-container input[type="text"] {
+        width: 100px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ADD8E6; /* Light blue background color */
+}
+header {
+    background-color: rgb(29, 20, 158);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    height: auto; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+header img {
+    height: 80px; /* Adjust logo size */
+    margin-left: 10px;
+}
+header h1 {
+    font-size: 1.5em; /* Adjusted font size */
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+.nav-wrapper {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center; /* Centering the navigation buttons */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+.nav-wrapper a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: 5px; /* Adjusted margin for better spacing */
+    transition: background-color 0.3s, color 0.3s;
+}
+.nav-wrapper a:hover {
+    background-color: #fff;
+    color: rgb(29, 20, 158);
+}
+header .search-container {
+    position: relative;
+    margin-right: 10px;
+}
+.search-container input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    width: 120px;
+}
+.search-container button {
+    padding: 5px;
+    background: #ddd;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+.search-container button:hover {
+    background: #ccc;
+}
+.carousel {
+    margin: 20px auto;
+    max-width: 100%; /* Adjusted width to 100% */
+}
+.carousel-item img {
+    width: 100%;
+    height: 450px; /* Maintain height */
+    object-fit: cover;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 20px;
+    height: auto;
+    flex-wrap: wrap;
+}
+.movie {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+    position: relative; /* Added position relative */
+    overflow: hidden; /* Hide overflowing elements */
+}
+.movie img {
+    width: 100%;
+    height: auto; /* Allow the image to adapt its height */
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+.movie:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+.movie h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+.movie p {
+    margin-top: 5px;
+    color: #666;
+}
+.book-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 5px 0 5px;
+    color: #fff;
+    background-color: rgb(29, 20, 158);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.book-button:hover {
+    background-color: #fff;
+    color: rgb(29, 20, 158);
+}
+footer {
+    background-color: rgb(29, 20, 158);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.social-icons {
+    float: right;
+    padding-right: 20px;
+}
+.social-icons a {
+    display: inline-block;
+    margin-left: 15px;
+}
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto; /* Adjust height for smaller screens */
+    }
+    header img {
+        margin: 10px 0;
+    }
+    .nav-wrapper {
+        justify-content: center;
+    }
+    .search-container {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 576px) {
+    .carousel {
+        max-width: 100%;
+    }
+    .carousel-item img {
+        height: auto; /* Allow the image to adapt its height */
+    }
+    .container {
+        padding: 0 10px;
+    }
+    .movie {
+        max-width: 100%;
+    }
+    .movie img {
+        height: auto; /* Allow the image to adapt its height */
+    }
+}
+
+ /* Additional styles for the menu button */
+ .menu-icon {
+    display: none; /* Hide the menu icon by default */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* Ensure it's above other elements */
+    cursor: pointer;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+    }
+    .sidenav {
+        width: 250px; /* Adjust the width of the sidebar */
+    }
+}
+
+/* Spacing between sections */
+section {
+    margin-bottom: 40px;
+}
+
+/* Style for the feedback form */
+.feedback-form {
+    margin-top: 20px; /* Add margin to the top of the form */
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Light blue background color for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ADD8E6; /* Light blue background color */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff;
+}
+header {
+    background-color: rgb(29, 20, 158);
+    color: #fff;
+    padding: 10px;
+    text-align: center; 
+    position: relative;
+}
+h1 {
+    margin: 20px 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 100px auto;
+    padding: 0 20px;
+    height: auto;
+    flex-wrap: wrap;
+}
+.movie {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+.movie:hover {
+    transform: scale(1.05);
+}
+.movie img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.movie h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+.movie p {
+    margin-top: 5px;
+    color: #666;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.nav-wrapper a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.nav-wrapper a:hover {
+    background-color: #333;
+}
+.search-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 180px;
+}
+.search-container button {
+    padding: 10px;
+    background: #ddd;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.search-container button:hover {
+    background: #ccc;
+}
+footer {
+    background-color: rgb(29, 20, 158);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.social-icons {
+    float: right;
+    padding-right: 20px;
+}
+.social-icons a {
+    display: inline-block;
+    margin-left: 15px;
+}
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+.slideshow-container {
+max-width: 100%;
+overflow: hidden;
+position: relative;
+margin: auto;
+}
+
+.mySlides img {
+width: 100%;
+max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+
+@keyframes fade {
+from {opacity: 0} 
+to {opacity: 1}
+}
+
+/* Adjusted margin for movie elements */
+.container .movie {
+margin: 10px;
+padding: 20px;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+text-align: center;
+max-width: calc(20% - 20px); /* 20% width with 10px margin on each side */
+transition: transform 0.3s ease-in-out;
+}
+
+/* Adjusted movie width for smaller screens */
+@media (max-width: 768px) {
+.container .movie {
+max-width: calc(33.33% - 20px); /* 33.33% width with 10px margin on each side */
+}
+}
+
+@media (max-width: 480px) {
+.container .movie {
+max-width: calc(50% - 20px); /* 50% width with 10px margin on each side */
+}
+}
+
+    .movie {
+        max-width: 90%;
+    }
+    .search-container {
+        top: 5px;
+        right: 5px;
+    }
+    .search-container input[type="text"] {
+        width: 150px;
+    }
+
+@media (max-width: 480px) {
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-container input[type="text"] {
+        width: 100px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff;
+}
+header {
+    background-color: rgb(29, 20, 158);
+    color: #fff;
+    padding: 10px;
+    text-align: center; 
+    position: relative;
+}
+h1 {
+    margin: 20px 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 100px auto;
+    padding: 0 20px;
+    height: auto;
+    flex-wrap: wrap;
+}
+.movie {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+.movie:hover {
+    transform: scale(1.05);
+}
+.movie img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.movie h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+.movie p {
+    margin-top: 5px;
+    color: #666;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.nav-wrapper a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.nav-wrapper a:hover {
+    background-color: #333;
+}
+.search-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 180px;
+}
+.search-container button {
+    padding: 10px;
+    background: #ddd;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.search-container button:hover {
+    background: #ccc;
+}
+footer {
+    background-color: rgb(29, 20, 158);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.social-icons {
+    float: right;
+    padding-right: 20px;
+}
+.social-icons a {
+    display: inline-block;
+    margin-left: 15px;
+}
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+.slideshow-container {
+max-width: 100%;
+overflow: hidden;
+position: relative;
+margin: auto;
+}
+
+.mySlides img {
+width: 100%;
+max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+
+@keyframes fade {
+from {opacity: 0} 
+to {opacity: 1}
+}
+
+/* Adjusted margin for movie elements */
+.container .movie {
+margin: 10px;
+padding: 20px;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+text-align: center;
+max-width: calc(20% - 20px); /* 20% width with 10px margin on each side */
+transition: transform 0.3s ease-in-out;
+}
+
+/* Adjusted movie width for smaller screens */
+@media (max-width: 768px) {
+.container .movie {
+max-width: calc(33.33% - 20px); /* 33.33% width with 10px margin on each side */
+}
+}
+
+@media (max-width: 480px) {
+.container .movie {
+max-width: calc(50% - 20px); /* 50% width with 10px margin on each side */
+}
+}
+
+    .movie {
+        max-width: 90%;
+    }
+    .search-container {
+        top: 5px;
+        right: 5px;
+    }
+    .search-container input[type="text"] {
+        width: 150px;
+    }
+
+@media (max-width: 480px) {
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-container input[type="text"] {
+        width: 100px;
+    }
+}
