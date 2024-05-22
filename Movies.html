@@ -11,11 +11,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e6f7ff; /* Light blue background color */
+            background-color: #e6f7ff;
         }
         header {
             background-color: rgb(29, 20, 158);
@@ -30,8 +30,8 @@
         .container {
             display: flex;
             justify-content: center;
-            max-width: 1400px; /* Adjust the max-width as needed */
-            margin: 20px auto; /* Adjust margin */
+            max-width: 1400px;
+            margin: 100px auto;
             padding: 0 20px;
             height: auto;
             flex-wrap: wrap;
@@ -45,16 +45,14 @@
             text-align: center;
             max-width: 250px;
             transition: transform 0.3s ease-in-out;
-            flex: 1 1 300px; /* Flexbox adjustments */
-            max-width: calc(33.33% - 20px); /* Adjusted width for 3 items in a row */
         }
         .movie:hover {
             transform: scale(1.05);
         }
         .movie img {
-            width: 100%; /* Set image width to 100% */
-            height: 200px; /* Set a fixed height for all images */
-            object-fit: cover; /* Maintain aspect ratio */
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
             border-radius: 5px;
         }
         .movie h2 {
@@ -65,24 +63,20 @@
             margin-top: 5px;
             color: #666;
         }
-        /* Navigation Stylish Buttons */
-        .nav-buttons {
+        .nav-wrapper {
             display: flex;
             justify-content: center;
-            margin-top: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-        .nav-button {
-            margin: 0 10px;
-            padding: 10px 20px;
-            background-color: #111;
-            color: #fff;
-            border: none;
+        .nav-wrapper a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
             border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        .nav-button:hover {
+        .nav-wrapper a:hover {
             background-color: #333;
         }
         .search-container {
@@ -131,57 +125,70 @@
             width: 40px;
             height: 40px;
         }
-
-        /* Slideshow CSS */
         .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
 
-        .mySlides {
-            display: none;
-        }
+.mySlides img {
+    width: 100%;
+    max-height: 400px; /* Adjust the maximum height as needed */
+}
 
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
 
-        @keyframes fade {
-            from {opacity: .4} 
-            to {opacity: 1}
-        }
+@keyframes fade {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
 
-        .dot {
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
+/* Adjusted margin for movie elements */
+.container .movie {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: calc(20% - 20px); /* 20% width with 10px margin on each side */
+    transition: transform 0.3s ease-in-out;
+}
 
-        .active {
-            background-color: #717171;
-        }
+/* Adjusted movie width for smaller screens */
+@media (max-width: 768px) {
+    .container .movie {
+        max-width: calc(33.33% - 20px); /* 33.33% width with 10px margin on each side */
+    }
+}
 
-        /* Responsive adjustments */
-        @media screen and (max-width: 992px) {
+@media (max-width: 480px) {
+    .container .movie {
+        max-width: calc(50% - 20px); /* 50% width with 10px margin on each side */
+    }
+}
+
             .movie {
-                max-width: calc(50% - 20px); /* Adjusted width for 2 items in a row */
+                max-width: 90%;
+            }
+            .search-container {
+                top: 5px;
+                right: 5px;
+            }
+            .search-container input[type="text"] {
+                width: 150px;
+            }
+        
+        @media (max-width: 480px) {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .search-container input[type="text"] {
+                width: 100px;
             }
         }
-
-        @media screen and (max-width: 576px) {
-            .movie {
-                max-width: 100%; /* Adjusted width for 1 item in a row */
-            }
-        }
-    </style>    
+    </style>
 </head>
 <body>
 <header>
@@ -205,14 +212,14 @@
 
 <section id="slideshow">
     <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="Nseries1.jpg" style="width:100%">
+        <div class="mySlides ">
+            <img src="mad.jpeg" style="width:100%">
         </div>
-        <div class="mySlides fade">
-            <img src="Rseries3.jpg" style="width:100%">
+        <div class="mySlides ">
+            <img src="fear.jpg" style="width:100%">
         </div>
-        <div class="mySlides fade">
-            <img src="Rseries5.jpg" style="width:100%">
+        <div class="mySlides ">
+            <img src="lion2.jpg" style="width:100%">
         </div>
     </div>
     <br>
@@ -305,7 +312,7 @@
     </div>
 </section>
 
-<footer id="footer">
+<footer>
     <div class="social-icons">
         <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook.png" alt="Facebook"></a>
         <a href="https://twitter.com/Warnerbros/"><img src="twitter.png" alt="twitter"></a>
@@ -316,7 +323,7 @@
 </footer>
 
 <script>
-   var slideIndex = 0;
+    var slideIndex = 0;
     showSlides();
 
     function showSlides() {

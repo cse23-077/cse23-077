@@ -126,38 +126,48 @@
             height: 40px;
         }
         .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
-        .mySlides {
-            display: none;
-        }
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-        @keyframes fade {
-            from {opacity: .4} 
-            to {opacity: 1}
-        }
-        .dot {
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-        .active {
-            background-color: #717171;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides img {
+    width: 100%;
+    max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+
+@keyframes fade {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+/* Adjusted margin for movie elements */
+.container .movie {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: calc(20% - 20px); /* 20% width with 10px margin on each side */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Adjusted movie width for smaller screens */
+@media (max-width: 768px) {
+    .container .movie {
+        max-width: calc(33.33% - 20px); /* 33.33% width with 10px margin on each side */
+    }
+}
+
+@media (max-width: 480px) {
+    .container .movie {
+        max-width: calc(50% - 20px); /* 50% width with 10px margin on each side */
+    }
+}
+
             .movie {
                 max-width: 90%;
             }
@@ -168,7 +178,7 @@
             .search-container input[type="text"] {
                 width: 150px;
             }
-        }
+        
         @media (max-width: 480px) {
             .nav-wrapper {
                 flex-direction: column;
@@ -202,14 +212,14 @@
 
 <section id="slideshow">
     <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="GAME1.jpg" style="width:100%">
+        <div class="mySlides ">
+            <img src="Mobile3.jpg" style="width:100%">
         </div>
-        <div class="mySlides fade">
-            <img src="Rseries3.jpg" style="width:100%">
+        <div class="mySlides ">
+            <img src="Game3.jpg" style="width:100%">
         </div>
-        <div class="mySlides fade">
-            <img src="Mobile5.jpg" style="width:100%">
+        <div class="mySlides ">
+            <img src="Game2.jpg" style="width:100%">
         </div>
     </div>
     <br>
